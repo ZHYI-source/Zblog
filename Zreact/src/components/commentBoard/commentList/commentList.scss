@@ -1,0 +1,15 @@
+.comment-item {
+  box-sizing: border-box;
+  padding: 8px;
+  animation: one-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes one-in {
+  from {
+    padding-top: 100px;
+    height: 0%;
+  }
+  to {
+    padding-top: 0px;
+    height: 100%;
+  }
+}

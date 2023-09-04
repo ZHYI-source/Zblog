@@ -1,0 +1,27 @@
+.self-introduction {
+  background-image: url('../../assets/img/bg.png');
+  //background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  height: 350px;
+  margin-bottom: 8px;
+  &:hover {
+    background-color: #fff;
+  }
+  .self-introduction-b {
+    background-color: rgba(#fff,.7);
+    height: 350px;
+    padding: 8px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    word-break: break-all;
+    font-weight: bolder;
+    font-family:TwitterChirp ;
+    ul {
+      li {
+        padding: 4px 0;
+      }
+    }
+  }
+}

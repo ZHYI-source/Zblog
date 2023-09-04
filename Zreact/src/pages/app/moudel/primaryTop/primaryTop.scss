@@ -1,0 +1,62 @@
+#primary-top {
+  border-bottom: 1px solid #eee;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  height: 60px;
+  padding: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  line-height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+
+  .primary-header {
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 44px;
+    .header-title {
+      cursor: pointer;
+      &:hover {
+        color: #e00404;
+      }
+    }
+    .header-icon {
+      cursor: pointer;
+      display: none;
+    }
+    .primary-logo {
+      display: none;
+    }
+  }
+
+  .header-logos {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    padding: 15px 8px;
+
+    img {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid #eee;
+    }
+
+  }
+
+  .header-input {
+    textarea {
+      height: 100px;
+      width: 100%;
+      border: none;
+      padding: 10px;
+
+    }
+  }
+
+
+}

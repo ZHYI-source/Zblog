@@ -1,0 +1,31 @@
+// 工具类名统一前缀
+$prefix: mp-;
+/* scroll bar
+=============================================================================*/
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #d81e06;
+}
+::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+/* 字数超出省略号
+=============================================================================*/
+
+%ellipsis {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+//可点击
+%cursor-pointer {
+  cursor: pointer;
+}

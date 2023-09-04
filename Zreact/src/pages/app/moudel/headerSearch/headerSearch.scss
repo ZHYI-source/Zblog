@@ -1,0 +1,42 @@
+.header-search{
+  //display: inline-block;
+  position: relative;
+  border: 1px solid #eee;
+  padding: 0 12px;
+  border-radius: 28px;
+  display: none;
+  i{
+    font-size: 18px;
+    position: relative;
+    top: 3px;
+  }
+  input{
+    border:none;
+    outline:none;
+    overflow: hidden;
+    background: transparent;
+    height: 30px;
+    width: 0;
+    transition: .2s all;
+    font-size: 13px;
+
+    &::placeholder {
+      color: #c1c1c1;
+      font-size: 13px;
+    }
+    &.show{
+      transition: all .2s linear;
+      transition-property: background-color, box-shadow;
+      animation: search-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      margin-left: 10px;
+    }
+  }
+}
+@keyframes search-in {
+  from {
+    width: 0;
+  }
+  to {
+    width: 200px;
+  }
+}

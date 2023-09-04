@@ -1,0 +1,13 @@
+.Reditor {
+  background-color: #fff;
+  border-radius: 5px;
+  .toolbar-grp > .item {
+    border: none;
+    &:last-child {
+      border: none;
+    }
+  }
+  .toolbar-grp > .item:after {
+    border: none!important;
+  }
+}

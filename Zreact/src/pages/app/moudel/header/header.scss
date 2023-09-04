@@ -1,0 +1,49 @@
+
+.header-box {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 198px;
+  //background-color: #fff;
+  .header-logo {
+    padding: 0px 8px;
+    padding-top: 15px;
+    box-sizing: border-box;
+    img {
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      border-radius: 50%;
+      padding: 2px;
+      text-align: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+    }
+  }
+
+  .nav-item {
+    box-sizing: border-box;
+    padding: 12px;
+    line-height: 24px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    transition: all .1s linear;
+    &:hover {
+      font-weight: 600;
+    }
+    .item-name {
+      padding-left: 10px;
+    }
+  }
+
+  .head-btn {
+    width: 75%;
+    margin: 15px 0px;
+  }
+}
