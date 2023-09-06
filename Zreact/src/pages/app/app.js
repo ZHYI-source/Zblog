@@ -24,6 +24,50 @@ const style = {
 
 const App = () => {
 
+    const [theme, setTheme] = useState({})
+    const [themeIndex, setThemeIndex] = useState(0); // 用于跟踪当前主题索引
+    const themes = [
+        {
+            background: '#FFFFFF',
+            text: '#333',
+            fontFamily: 'Courier New, monospace',
+        },
+        {
+            background: '#E6F7FF',
+            text: '#333',
+            fontFamily: 'Courier New, monospace',
+        },
+        {
+            background: '#F5F5F5',
+            text: '#333',
+            fontFamily: 'Georgia, serif',
+        },
+        {
+            background: '#FFFFE0',
+            text: '#663300',
+            fontFamily: 'Times New Roman, serif',
+        },
+        {
+            background: '#E6FFE6',
+            text: '#006600',
+            fontFamily: 'Verdana, sans-serif',
+        },
+        {
+            background: '#000',
+            text: '#d4d2d2',
+            fontFamily: '幼圆',
+        },
+        {
+            background: '#F0E6FF',
+            text: '#6600CC',
+            fontFamily: 'Arial, sans-serif',
+        },
+        {
+            background: '#FFE6E6',
+            text: '#CC0000',
+            fontFamily: 'Helvetica, sans-serif',
+        },
+    ]; // 配置的主题颜色数组
     const [backgroundPosition, setBackgroundPosition] = useState('50% 0')
     const [backgroundImage, setBackgroundImage] = useState('url(http://www.zhouyi.run:3089/v1/common/files/preview/img/1691571900783.png)')
     const navigate = useNavigate();
@@ -69,8 +113,18 @@ const App = () => {
         };
     }, []); // 空数组表示只在组件挂载和卸载时执行
 
+    const changeTheme = () => {
+        // 获取下一个主题颜色
+        const nextThemeIndex = (themeIndex + 1) % themes.length;
+        const nextTheme = themes[nextThemeIndex];
+
+        // 设置下一个主题颜色
+        setTheme(nextTheme);
+        setThemeIndex(nextThemeIndex);
+    }
+
     return (
-        <section className="app">
+        <section className="app" style={{backgroundColor: theme.background, color: theme.text,fontFamily:theme.fontFamily}}>
             <aside className="app-aside">
                 <section className="aside-wrap"
                          style={{backgroundImage: backgroundImage, backgroundPosition: backgroundPosition,}}>
@@ -86,7 +140,7 @@ const App = () => {
                                target="_blank"></a>
                             <a className="iconfont icon-github-fill" title="GitHub"
                                href="https://github.com/ZHYI-source" target="_blank"> </a>
-                            <i className="iconfont icon-zhuti_tiaosepan_o" title="更换主题"></i>
+                            <i className="iconfont icon-zhuti_tiaosepan_o" onClick={changeTheme} title="更换主题"></i>
                             <i className="iconfont icon-24gl-expand2" title="打开全屏阅读更舒服" onClick={openFullscreen}></i>
                         </div>
                     </section>
@@ -96,7 +150,7 @@ const App = () => {
                     </section>
                 </section>
             </aside>
-            <main className="app-main">
+            <main className="app-main" style={{color: theme.text}}>
                 {/*路由内容渲染*/}
                 <Outlet/>
             </main>

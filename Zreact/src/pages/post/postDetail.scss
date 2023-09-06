@@ -2,14 +2,20 @@
   padding: 2.5rem;
   //max-width: 1000px;
   margin: auto;
+  color: inherit;
+  font-family: inherit;
   img {
     width: 100%;
   }
   .post-detail-header {
     //text-align: center;
     margin-bottom: 3rem;
+    font-family: inherit;
     h2 {
       font-size: 2rem;
+      font-family: inherit;
+      font-weight: bolder;
+      color: inherit;
     }
     .tip {
       color: #909399;
@@ -18,10 +24,10 @@
     }
   }
   .post-detail-body {
-    font-size: 1rem;
-    color: #616161;
+    font-size: 1.3rem;
+    color: inherit;
     letter-spacing: 1px;
-
+    font-family: inherit;
   }
   .reship {
     width: 100%;

@@ -1,10 +1,8 @@
 import React, {useState} from 'react';
 import './postDetail.scss'
 import {Pagination} from 'antd';
-import myImage from '../../assets/img/post-detail.png';
 const PostDetail = () => {
     const [postData, setPostData] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
-
     return (
         <>
             <section className="post-detail">
