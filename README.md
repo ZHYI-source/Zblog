@@ -1,7 +1,7 @@
 # 简约博客前端模板
 
 <p align="center">
-<img src="http://www.zhouyi.run:3089/v1/common/files/preview/img/1691548931529.png"/>
+<img src="doc/logo.png"/>
 </p>
 
 #### 介绍
