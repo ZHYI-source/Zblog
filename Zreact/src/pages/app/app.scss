@@ -178,6 +178,16 @@ html, body {
           }
         }
       }
+      .marquee-scroll {
+        width: 100%;
+        position: fixed;
+        bottom: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 12px;
+        letter-spacing: 1px;
+
+      }
       .copyright {
         position: fixed;
         bottom: 0;
@@ -211,7 +221,7 @@ html, body {
         width: 6rem!important;
         height: 6rem!important;
       }
-      .copyright {
+      .copyright,.marquee-scroll {
         display: none;
       }
     }

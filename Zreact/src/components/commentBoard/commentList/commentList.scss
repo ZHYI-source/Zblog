@@ -2,6 +2,11 @@
   box-sizing: border-box;
   padding: 8px;
   animation: one-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  .name {
+    color: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+  }
 }
 @keyframes one-in {
   from {

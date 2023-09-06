@@ -1,15 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import {Outlet, useNavigate} from "react-router-dom";
-import {Affix, Avatar, BackTop, Divider, Drawer, Input} from "antd";
-import Header from "./moudel/header/header";
-import RightBar from "./moudel/rightBar/rightBar";
-import MenuList from "../../components/menuList/menuList";
-import HeaderSearch from "./moudel/headerSearch/headerSearch";
+import {Outlet, useNavigate, useLocation} from "react-router-dom";
+import {BackTop} from "antd";
 import './app.scss'
-import PrimaryTop from "./moudel/primaryTop/primaryTop";
-import Copyright from "../../components/copyright/copyright";
-import {Provider} from "react-redux";
 import lazyLoadImages from "../../utils/util.lazyLoad";
+import Marquee from "react-fast-marquee";
 
 const style = {
     height: 30,
@@ -22,8 +16,18 @@ const style = {
     fontSize: 12,
 };
 
-const App = () => {
+// react-route v6 页面切换后回到顶部组件
+function ScrollToTop() {
+    const {pathname} = useLocation();
 
+    useEffect(() => {
+        window.scrollTo(0, 0); // 滚动到页面顶部
+    }, [pathname]);
+
+    return null;
+}
+
+const App = () => {
     const [theme, setTheme] = useState({})
     const [themeIndex, setThemeIndex] = useState(0); // 用于跟踪当前主题索引
     const themes = [
@@ -69,7 +73,7 @@ const App = () => {
         },
     ]; // 配置的主题颜色数组
     const [backgroundPosition, setBackgroundPosition] = useState('50% 0')
-    const [backgroundImage, setBackgroundImage] = useState('url(http://www.zhouyi.run:3089/v1/common/files/preview/img/1691571900783.png)')
+    const [backgroundImage, setBackgroundImage] = useState('url(https://images.unsplash.com/photo-1693057205719-e439be478b33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1916&q=80)')
     const navigate = useNavigate();
 
     let currentImageIndex = 1;
@@ -124,7 +128,8 @@ const App = () => {
     }
 
     return (
-        <section className="app" style={{backgroundColor: theme.background, color: theme.text,fontFamily:theme.fontFamily}}>
+        <section className="app"
+                 style={{backgroundColor: theme.background, color: theme.text, fontFamily: theme.fontFamily}}>
             <aside className="app-aside">
                 <section className="aside-wrap"
                          style={{backgroundImage: backgroundImage, backgroundPosition: backgroundPosition,}}>
@@ -144,6 +149,15 @@ const App = () => {
                             <i className="iconfont icon-24gl-expand2" title="打开全屏阅读更舒服" onClick={openFullscreen}></i>
                         </div>
                     </section>
+                    {/*<section className="marquee-scroll">
+                        <Marquee>
+                            <li>ALL</li>
+                            <li>VUE</li>
+                            <li>REACT</li>
+                            <li>移动H5</li>
+                            <li>小程序</li>
+                        </Marquee>
+                    </section>*/}
                     <section className='copyright'>
                         Copyright ©2023 by <a href="https://gitee.com/Z568_568" target="_blank"> @ZHOUYI</a>. All rights
                         reserved.
@@ -152,6 +166,7 @@ const App = () => {
             </aside>
             <main className="app-main" style={{color: theme.text}}>
                 {/*路由内容渲染*/}
+                <ScrollToTop/>
                 <Outlet/>
             </main>
             <BackTop>

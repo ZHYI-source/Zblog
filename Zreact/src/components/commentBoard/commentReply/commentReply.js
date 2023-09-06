@@ -7,10 +7,10 @@ const CommentReply = () => {
         <div className='comment-reply'>
             <Comment
                 actions={[
-                    <Button htmlType="submit" type="primary">评论</Button>
+                    <button className="site-btn" type="submit" >评论</button>
                 ]}
-                author={<a>Maple</a>}
-                avatar={<Avatar src="https://joeschmoe.io/api/v1/random" alt="Han Solo"/>}
+                author={<span className="name">ZHOU YI</span>}
+                avatar={<Avatar src="http://www.zhouyi.run:3089/v1/common/files/preview/img/1691548931529.png" alt="Han Solo"/>}
                 content={
                     <TextArea rows={4}/>
                 }
