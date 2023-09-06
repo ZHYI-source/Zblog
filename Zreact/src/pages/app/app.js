@@ -16,8 +16,8 @@ const style = {
     width: 30,
     lineHeight: '30px',
     borderRadius: 4,
-    backgroundColor: '#ff0000',
-    color: '#fff',
+    backgroundColor: '#f5f5f5',
+    color: '#242424',
     textAlign: 'center',
     fontSize: 12,
 };
@@ -26,7 +26,7 @@ const App = () => {
 
     const [backgroundPosition, setBackgroundPosition] = useState('50% 0')
     const [backgroundImage, setBackgroundImage] = useState('url(http://www.zhouyi.run:3089/v1/common/files/preview/img/1691571900783.png)')
-
+    const navigate = useNavigate();
 
     let currentImageIndex = 1;
     const totalImages = 9;
@@ -36,7 +36,7 @@ const App = () => {
     }
 
     function updateBackgroundImage() {
-        setBackgroundImage(`url(http://www.zhouyi.run:3089/v1/common/files/preview/img/${getImageName(currentImageIndex)}.jpg)`) ;
+        setBackgroundImage(`url(http://www.zhouyi.run:3089/v1/common/files/preview/img/${getImageName(currentImageIndex)}.jpg)`);
         currentImageIndex = (currentImageIndex % totalImages) + 1;
     }
 
@@ -55,14 +55,14 @@ const App = () => {
     }
     const handleScroll = () => {
         const offsetY = window.scrollY;
-        setBackgroundPosition(`50% ${(offsetY * 0.02)>95?95:offsetY * 0.02}%`)
+        setBackgroundPosition(`50% ${(offsetY * 0.02) > 95 ? 95 : offsetY * 0.02}%`)
     }
     useEffect(() => {
         // 这里可以执行副作用操作，类似于componentDidMount 和 componentDidUpdate
         lazyLoadImages()
         // 给全局window对象添加滚动事件监听器
         window.addEventListener('scroll', handleScroll);
-        setInterval(updateBackgroundImage, 5000);
+        setInterval(updateBackgroundImage, 8000);
         // 返回一个清理函数，模拟 componentWillUnmount
         return () => {
             window.removeEventListener('scroll', handleScroll);
@@ -72,18 +72,27 @@ const App = () => {
     return (
         <section className="app">
             <aside className="app-aside">
-                <section className="aside-wrap" style={{backgroundImage:backgroundImage,backgroundPosition: backgroundPosition,}}>
+                <section className="aside-wrap"
+                         style={{backgroundImage: backgroundImage, backgroundPosition: backgroundPosition,}}>
+                    <section className="aside-mask"></section>
                     <section className="aside-wrap-info">
                         <img className="info-avatar lazy-image"
                              data-src="http://www.zhouyi.run:3089/v1/common/files/preview/img/1691548931529.png"/>
                         <p className="info-title">Zblog</p>
                         <p className="info-title-sub">有趣的人记录有趣的事。 </p>
                         <div className="info-icon-list">
-                            <i className="iconfont icon-gitee" title="码云"></i>
-                            <i className="iconfont icon-github-fill" title="GitHub"></i>
+                            <i className="iconfont icon-shouye" title="主页" onClick={() => navigate('/')}></i>
+                            <a className="iconfont icon-gitee" title="码云" href="https://gitee.com/Z568_568/Zblog"
+                               target="_blank"></a>
+                            <a className="iconfont icon-github-fill" title="GitHub"
+                               href="https://github.com/ZHYI-source" target="_blank"> </a>
                             <i className="iconfont icon-zhuti_tiaosepan_o" title="更换主题"></i>
                             <i className="iconfont icon-24gl-expand2" title="打开全屏阅读更舒服" onClick={openFullscreen}></i>
                         </div>
+                    </section>
+                    <section className='copyright'>
+                        Copyright ©2023 by <a href="https://gitee.com/Z568_568" target="_blank"> @ZHOUYI</a>. All rights
+                        reserved.
                     </section>
                 </section>
             </aside>

@@ -84,7 +84,7 @@ html, body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  //font-family: '新宋体';
+  font-family: 'TwitterChirp';
   width: 100%;
   height: 100%;
   display: flex;
@@ -99,13 +99,14 @@ html, body {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
 
     .aside-wrap {
       box-sizing: border-box;
       width: 100%;
       height: 100%;
       background-image: url(http://www.zhouyi.run:3089/v1/common/files/preview/img/03.jpg);
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 1);
       //background-image: url(https://blogcdn.dandyweng.com/backgrounds/08.jpg);
       background-repeat: no-repeat;
       transform-style: preserve-3d;
@@ -113,6 +114,11 @@ html, body {
       transition: background-image 2s ease-in-out;
       will-change: transition;
 
+      .aside-mask {
+        background-color: #00000080;
+        height: 100%;
+        width: 100%;
+      }
       .aside-wrap-info {
         text-align: center;
         position: absolute;
@@ -120,20 +126,24 @@ html, body {
         left: 50%;
         color: #fff;
         transform: translateX(-50%) translateY(-50%);
+        z-index: 1;
 
         .info-avatar {
           border-radius: 100%;
           box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5), 0px 2px 20px 3px rgba(0, 0, 0, 0.25);
+          background-color: rgba(#fff,.2);
           width: 8rem;
           height: 8rem;
           display: inline-block;
           object-fit: cover;
-          margin-bottom: 1rem;
+          margin-bottom: 2rem;
+          mix-blend-mode: color;
         }
 
         .info-title {
-          font-size: 3.1rem;
+          font-size: 3rem;
           line-height: 1;
+
           font-family: "plantc", "Source Han Serif", serif;
           letter-spacing: 2px;
           margin-bottom: 1rem;
@@ -155,7 +165,6 @@ html, body {
             border-radius: 50%;
             width: 25px;
             height: 25px;
-            line-height: 25px;
             color: #ffffff;
             cursor: pointer;
             transition: all .3s linear;
@@ -166,6 +175,14 @@ html, body {
             }
           }
         }
+      }
+      .copyright {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 12px;
+        letter-spacing: 1px;
       }
     }
 
@@ -185,13 +202,21 @@ html, body {
     flex-direction: column;
 
     .app-aside {
-      height: 220px;
+      height: 300px;
       width: 100%;
+      position: relative;
+      .info-avatar {
+        width: 6rem!important;
+        height: 6rem!important;
+      }
+      .copyright {
+        display: none;
+      }
     }
 
     .app-main {
       width: 100%;
-      margin: 220px 0 0;
+      margin:  0;
     }
   }
 

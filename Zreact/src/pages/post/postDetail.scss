@@ -1,0 +1,47 @@
+.post-detail {
+  padding: 2.5rem;
+  //max-width: 1000px;
+  margin: auto;
+  img {
+    width: 100%;
+  }
+  .post-detail-header {
+    //text-align: center;
+    margin-bottom: 3rem;
+    h2 {
+      font-size: 2rem;
+    }
+    .tip {
+      color: #909399;
+      font-size: .9rem;
+      letter-spacing: .8px;
+    }
+  }
+  .post-detail-body {
+    font-size: 1rem;
+    color: #616161;
+    letter-spacing: 1px;
+
+  }
+  .reship {
+    width: 100%;
+    min-height: 120px;
+    background-color: #000000;
+    position: relative;
+    margin: 3rem auto;
+    box-sizing: border-box;
+    padding: 2rem;
+    color: #dcdcdc;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      border: 10px solid transparent;
+      border-bottom-color: #000000;
+    }
+  }
+}
+
+

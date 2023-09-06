@@ -1,6 +1,26 @@
 
 .post-box {
-  padding: 3rem 4.5rem;
+  padding: 1rem 4.5rem 2rem;
+  @media screen and (max-width: 750px) {
+    padding:1rem
+  }
+  .search-box {
+    height: 45px;
+
+    input {
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      border: 1px solid #EEEEEE;
+      border-radius: 40px;
+      outline-color: pink;
+      outline-width: 1px;
+      padding:0 1rem ;
+      &::placeholder {
+        opacity: .5;
+      }
+    }
+  }
 }
 
 .menu-list {
@@ -74,6 +94,14 @@
         object-fit: cover;
         transition: all .3s linear;
         //box-shadow: 0 2px 5px rgba(0, 0, 25, 0.1), 0 5px 35px 1px rgba(0, 0, 50, 0.2);
+      }
+    }
+    @media screen and (max-width: 750px) {
+      .blog-header {
+        width: 100%;
+      }
+      .blog-cover {
+        display: none;
       }
     }
   }
