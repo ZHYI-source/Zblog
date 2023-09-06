@@ -25,5 +25,5 @@
 
  ## 截图
  
- <img  src="doc/1.png" width = "200" height = "115">
- <img  src="doc/2.png" width = "200" height = "115">
+ <img  src="doc/1.png" >
+ <img  src="doc/2.png" >
