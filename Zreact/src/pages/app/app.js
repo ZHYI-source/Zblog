@@ -9,10 +9,7 @@ import './app.scss'
 import PrimaryTop from "./moudel/primaryTop/primaryTop";
 import Copyright from "../../components/copyright/copyright";
 import {Provider} from "react-redux";
-import AppAside from "./components/app-aside";
-import AppMain from "./components/app-main";
 import lazyLoadImages from "../../utils/util.lazyLoad";
-import RouterView from "../../router";
 
 const style = {
     height: 30,
@@ -63,7 +60,7 @@ const App = () => {
                 <section className="aside-wrap" style={{backgroundPosition: backgroundPosition,}}>
                     <section className="aside-wrap-info">
                         <img className="info-avatar lazy-image"
-                             data-src="http://www.zhouyi.run:3089/v1/common/files/preview/img/1691646896442.jpg"/>
+                             data-src="http://www.zhouyi.run:3089/v1/common/files/preview/img/1691548931529.png"/>
                         <p className="info-title">Zblog</p>
                         <p className="info-title-sub">有趣的人记录有趣的事。 </p>
                         <div className="info-icon-list">

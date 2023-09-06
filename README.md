@@ -1,5 +1,9 @@
 # 简约博客前端模板
 
+<p align="center">
+<img src="http://www.zhouyi.run:3089/v1/common/files/preview/img/1691548931529.png"/>
+</p>
+
 #### 介绍
 好看清新简约的博客模板，可以用来做个人博客，个人主页、工作室官网、自媒体官网、产品展示等网站。
 
