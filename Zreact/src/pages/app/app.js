@@ -25,6 +25,20 @@ const style = {
 const App = () => {
 
     const [backgroundPosition, setBackgroundPosition] = useState('50% 0')
+    const [backgroundImage, setBackgroundImage] = useState('url(http://www.zhouyi.run:3089/v1/common/files/preview/img/1691571900783.png)')
+
+
+    let currentImageIndex = 1;
+    const totalImages = 9;
+
+    function getImageName(index) {
+        return index < 10 ? `0${index}` : `${index}`;
+    }
+
+    function updateBackgroundImage() {
+        setBackgroundImage(`url(http://www.zhouyi.run:3089/v1/common/files/preview/img/${getImageName(currentImageIndex)}.jpg)`) ;
+        currentImageIndex = (currentImageIndex % totalImages) + 1;
+    }
 
     // 打开全屏
     const openFullscreen = function () {
@@ -48,6 +62,7 @@ const App = () => {
         lazyLoadImages()
         // 给全局window对象添加滚动事件监听器
         window.addEventListener('scroll', handleScroll);
+        setInterval(updateBackgroundImage, 5000);
         // 返回一个清理函数，模拟 componentWillUnmount
         return () => {
             window.removeEventListener('scroll', handleScroll);
@@ -57,7 +72,7 @@ const App = () => {
     return (
         <section className="app">
             <aside className="app-aside">
-                <section className="aside-wrap" style={{backgroundPosition: backgroundPosition,}}>
+                <section className="aside-wrap" style={{backgroundImage:backgroundImage,backgroundPosition: backgroundPosition,}}>
                     <section className="aside-wrap-info">
                         <img className="info-avatar lazy-image"
                              data-src="http://www.zhouyi.run:3089/v1/common/files/preview/img/1691548931529.png"/>

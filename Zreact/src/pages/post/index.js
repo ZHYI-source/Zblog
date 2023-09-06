@@ -1,13 +1,28 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import './index.scss'
+
 const PostList = () => {
-    // Use useState to initialize the state variable postData
-    const [postData, setPostData] = useState([1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13]);
+    const [postData, setPostData] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
 
     return (
         <section className="post-list">
             {postData.map((item) => {
-                return <div className="post-item" key={item}>{item}</div>; // Added a unique key prop
+                return (
+                    <article className="post-item" key={item}>
+                        <header className="blog-header" >
+                        <h2>测试的</h2>
+                        <p>测试的</p>
+                        <div className="blog-tip">
+                            <span>2023-09-06 12:30:25 发布</span>
+                            <span><i class="iconfont icon-chakan2"></i> 8</span>
+                            |  <span>5条喜欢</span>
+                        </div>
+                    </header>
+                        <div className="blog-cover">
+                            <img className="lazy-image"/>
+                        </div>
+                    </article>
+                )
             })}
         </section>
     );
