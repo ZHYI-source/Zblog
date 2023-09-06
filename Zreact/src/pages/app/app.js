@@ -44,7 +44,7 @@ const App = () => {
     }
     const handleScroll = () => {
         const offsetY = window.scrollY;
-        setBackgroundPosition(`50% ${offsetY * 0.02}%`)
+        setBackgroundPosition(`50% ${(offsetY * 0.02)>95?95:offsetY * 0.02}%`)
     }
     useEffect(() => {
         // 这里可以执行副作用操作，类似于componentDidMount 和 componentDidUpdate

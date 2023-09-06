@@ -1,67 +1,67 @@
-.aside-wrap {
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  background-image: url(https://images.unsplash.com/photo-1682762391990-b25cb817835c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
-  background-color: rgba(0, 0, 0, 0.5);
-  //background-image: url(https://blogcdn.dandyweng.com/backgrounds/08.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  transform-style: preserve-3d;
-  transition: background-image 2s ease-in-out;
-  will-change: transition;
-
-  .aside-wrap-info {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: #fff;
-    transform: translateX(-50%) translateY(-50%);
-
-    .info-avatar {
-      border-radius: 100%;
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5), 0px 2px 20px 3px rgba(0, 0, 0, 0.25);
-      width: 8rem;
-      height: 8rem;
-      display: inline-block;
-      object-fit: cover;
-      margin-bottom: 1rem;
-    }
-
-    .info-title {
-      font-size: 3.1rem;
-      line-height: 1;
-      font-family: "plantc", "Source Han Serif", serif;
-      letter-spacing: 2px;
-      margin-bottom: 1rem;
-    }
-
-    .info-title-sub {
-      font-size: 1rem;
-      text-align: center;
-    }
-
-    .info-icon-list {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-
-      .iconfont {
-        font-size: 1rem;
-        border: 1px solid #eeeeee;
-        border-radius: 50%;
-        width: 25px;
-        height: 25px;
-        line-height: 25px;
-        color: #ffffff;
-        cursor: pointer;
-        transition: all .3s linear;
-        &:hover {
-          color: #f3f3f3;
-          border: 1px solid #f3f3f3;
-        }
-      }
-    }
-  }
-}
+//.aside-wrap {
+//  box-sizing: border-box;
+//  width: 100%;
+//  height: 100%;
+//  background-image: url(https://images.unsplash.com/photo-1682762391990-b25cb817835c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+//  background-color: rgba(0, 0, 0, 0.5);
+//  //background-image: url(https://blogcdn.dandyweng.com/backgrounds/08.jpg);
+//  background-size: cover;
+//  background-repeat: no-repeat;
+//  transform-style: preserve-3d;
+//  transition: background-image 2s ease-in-out;
+//  will-change: transition;
+//
+//  .aside-wrap-info {
+//    text-align: center;
+//    position: absolute;
+//    top: 50%;
+//    left: 50%;
+//    color: #fff;
+//    transform: translateX(-50%) translateY(-50%);
+//
+//    .info-avatar {
+//      border-radius: 100%;
+//      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5), 0px 2px 20px 3px rgba(0, 0, 0, 0.25);
+//      width: 8rem;
+//      height: 8rem;
+//      display: inline-block;
+//      object-fit: cover;
+//      margin-bottom: 1rem;
+//    }
+//
+//    .info-title {
+//      font-size: 3.1rem;
+//      line-height: 1;
+//      font-family: "plantc", "Source Han Serif", serif;
+//      letter-spacing: 2px;
+//      margin-bottom: 1rem;
+//    }
+//
+//    .info-title-sub {
+//      font-size: 1rem;
+//      text-align: center;
+//    }
+//
+//    .info-icon-list {
+//      display: flex;
+//      justify-content: space-around;
+//      align-items: center;
+//
+//      .iconfont {
+//        font-size: 1rem;
+//        border: 1px solid #eeeeee;
+//        border-radius: 50%;
+//        width: 25px;
+//        height: 25px;
+//        line-height: 25px;
+//        color: #ffffff;
+//        cursor: pointer;
+//        transition: all .3s linear;
+//        &:hover {
+//          color: #f3f3f3;
+//          border: 1px solid #f3f3f3;
+//        }
+//      }
+//    }
+//  }
+//}

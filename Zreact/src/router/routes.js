@@ -14,7 +14,6 @@ const mainRoutesList = [
         path: '/',
         element: <App/>,
         children: [
-
             {
                 index: true, //默认路由
                 element: <Post/>,

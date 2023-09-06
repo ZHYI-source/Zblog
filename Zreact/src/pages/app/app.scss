@@ -107,9 +107,10 @@ html, body {
       background-image: url(http://www.zhouyi.run:3089/v1/common/files/preview/img/03.jpg);
       background-color: rgba(0, 0, 0, 0.5);
       //background-image: url(https://blogcdn.dandyweng.com/backgrounds/08.jpg);
-      background-size: cover;
+      //background-size: cover;
       background-repeat: no-repeat;
       transform-style: preserve-3d;
+      background-position: center -30px;
       transition: background-image 2s ease-in-out;
       will-change: transition;
 
