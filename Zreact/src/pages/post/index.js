@@ -8,41 +8,6 @@ const PostList = () => {
     const [postData, setPostData] = useState(
         [
             {
-                "_id": "64f6ea62a0d58a3cda8cf5b8",
-                "title": "【关于我】自述",
-                "cover": "https://images.pexels.com/photos/1534609/pexels-photo-1534609.jpeg?auto=compress&cs=tinysrgb&w=1600",
-                "content": " <p align=\"center\">\n   <img align=\"center\" src=\"https://github.com/ZHYI-source/ZHYI-source/assets/59498872/5f4a3557-4663-4778-b9df-1789b44693ec\" alt=\"Logo\" width=\"150\" height=\"150\">\n   </p>\n<h3 align=\"center\">\" Hi ! 👋 \"</h3>\n\n  <p align=\"center\">\n    热爱编程代码，坚信每一步都是奇迹，每一天都是新的起点。\n   </p>\n     <p align=\"center\">\n      <img align=\"center\" src=\"https://img.shields.io/badge/常用技术-red\">\n      <img align=\"center\" src=\"https://img.shields.io/badge/-Vue-34495e?logo=vue.js\">\n      <img align=\"center\" src=\"https://img.shields.io/badge/-React-34495e?logo=react.js\">\n      <img align=\"center\" src=\"https://img.shields.io/badge/-HTML5-red?logo=html5&logoColor=white\">\n      <img align=\"center\" src=\"https://img.shields.io/badge/-CSS3-blue?logo=css3&logoColor=white\">\n      <img align=\"center\" src=\"https://img.shields.io/badge/-JavaScript-yellow?logo=javascript&logoColor=white\">\n      <img align=\"center\" src=\"https://img.shields.io/badge/-Nodejs-red?logo=node.js&logoColor=white\">\n      <img align=\"center\" src=\"https://img.shields.io/badge/-Express-green?logo=Express&logoColor=white\">\n      <img align=\"center\" src=\"https://img.shields.io/badge/-MongoDB-yellow?logo=MongoDB&logoColor=white\">\n      <img align=\"center\" src=\"https://img.shields.io/badge/-Mysql-blue?logo=Mysql&logoColor=white\">\n</p>\n\n关于作者：\n- [主页@ZHOUYI](http://www.zhouyi.run)\n- [博客@ZHOUYI](http://www.zhouyi.run/#/blog)\n- [Gitee@ZHOUYI](https://gitee.com/Z568_568)\n  \n联系我：\n- [留言@ZHOUYI](http://www.zhouyi.run/#/contact)\n- 邮箱：yizhou568@gmail.com\n\n",
-                "userId": "64aabf3d28f413f08d51cc00",
-                "category": "简介",
-                "viewNum": 3,
-                "likeNum": 0,
-                "isReship": false,
-                "recommended": false,
-                "likeToken": [],
-                "status": true,
-                "createdAt": "2023-09-05T08:44:18.172Z",
-                "updatedAt": "2023-09-06T00:41:33.634Z",
-                "user": [
-                    {
-                        "_id": "64aabf3d28f413f08d51cc00",
-                        "avatar": "http://www.zhouyi.run:3089/v1/common/files/preview/img/1691548931529.png",
-                        "username": "admin",
-                        "nickname": "ZY·Admin",
-                        "password": "$2a$10$MPIYm/7XO6.vEFGy7N9IvujPFDsvBM8buX1LgNNz65ZnHuStI0qVK",
-                        "roleId": "64a423816f4197cfc70375e3",
-                        "status": true,
-                        "createdAt": "2023-07-09T14:07:57.766Z",
-                        "updatedAt": "2023-08-30T07:02:46.204Z",
-                        "type": "admin",
-                        "email": "1840354092@qq.com",
-                        "address": "贵州省贵阳市 电信",
-                        "userIp": "111.121.40.63",
-                        "platform": "Chrome.v115",
-                        "website": "http://www.zhouyi.run"
-                    }
-                ]
-            },
-            {
                 "_id": "64dc5132a0d58a3cda8cc3c0",
                 "title": "【项目总结】关于访客记录功能模块技术点",
                 "cover": "https://images.pexels.com/photos/1534609/pexels-photo-1534609.jpeg?auto=compress&cs=tinysrgb&w=1600",
