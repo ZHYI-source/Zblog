@@ -1,7 +1,7 @@
 # 简约博客前端模板
 
 <p align="center">
-<img src="doc/logo.png"/>
+<img width="150" src="doc/logo.png"/>
 </p>
 
 #### 介绍
