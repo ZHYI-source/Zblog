@@ -274,19 +274,19 @@ const PostList = () => {
                 <section className="search-box">
                     <input placeholder="搜索"/>
                 </section>
-                <ul className="menu-list">
+                {/* <ul className="menu-list">
                     <li>🪐ALL</li>
                     <li>🥏VUE</li>
                     <li>🚦REACT</li>
                     <li>🎯移动H5</li>
                     <li>💡小程序</li>
-                </ul>
+                </ul>*/}
                 <section className="post-list">
                     {postData.map((item) => {
                         return (
                             <article className="post-item" key={item._id}
-                                     onClick={() => navigate('/PostDetail', {state:{id: item._id}})}>
-                                <header className="blog-header">
+                                     onClick={() => navigate('/PostDetail', {state: {id: item._id}})}>
+                                <header className="blog-header" style={{width: !item.cover && '100%'}}>
                                     <h2>{item.title}</h2>
                                     <p>{item.abstract}</p>
                                     <div className="blog-tip">
@@ -294,18 +294,20 @@ const PostList = () => {
                                         <span><i className="iconfont icon-chakan"></i> {item.viewNum}</span>
                                     </div>
                                 </header>
-                                <div className="blog-cover">
-                                    <img
-                                        alt="cover"
-                                        src="http://www.zhouyi.run:3089/v1/common/files/preview/img/1691571900783.png"/>
-                                </div>
+                                {
+                                    item.cover && <div className="blog-cover">
+                                        <img
+                                            alt="cover"
+                                            src="http://www.zhouyi.run:3089/v1/common/files/preview/img/1691571900783.png"/>
+                                    </div>
+                                }
                             </article>
                         )
                     })}
                 </section>
                 {
                     postData.length > 5 && <section className="pagenation">
-                        <Pagination defaultCurrent={1} total={5}/>
+                        <Pagination size="small" total={50}/>
                     </section>
                 }
 

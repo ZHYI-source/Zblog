@@ -189,12 +189,16 @@ html, body {
 
       }
       .copyright {
+        font-family: sans-serif;
         position: fixed;
-        bottom: 0;
+        bottom: 1rem;
         left: 50%;
+        width: 100%;
+        text-align: center;
         transform: translateX(-50%);
         font-size: 12px;
         letter-spacing: 1px;
+        color: #EEEEEE;
       }
     }
 
@@ -221,7 +225,7 @@ html, body {
         width: 6rem!important;
         height: 6rem!important;
       }
-      .copyright,.marquee-scroll {
+      .copyright,.marquee-scroll,.icon-24gl-expand2 {
         display: none;
       }
     }

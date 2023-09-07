@@ -4,6 +4,8 @@ import {BackTop} from "antd";
 import './app.scss'
 import lazyLoadImages from "../../utils/util.lazyLoad";
 import Marquee from "react-fast-marquee";
+import { UserOutlined } from '@ant-design/icons';
+import { Avatar, Space } from 'antd';
 
 const style = {
     height: 30,
