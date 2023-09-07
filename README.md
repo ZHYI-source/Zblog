@@ -1,4 +1,3 @@
-# 简约博客前端模板
 
 <p align="center">
 <img width="150" src="doc/logo.png"/>
